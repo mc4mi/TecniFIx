@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TecniFix
 {
-    public partial class Form1: Form
+    public partial class frmInicioSesion: Form
     {
-        public Form1()
+        public frmInicioSesion()
         {
             InitializeComponent();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
