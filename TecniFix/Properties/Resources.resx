@@ -124,10 +124,13 @@
   <data name="LogoGrande" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LogoGrande.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Crear Usuario 128px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crear Usuario 128px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Usuario 128px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Usuario 128px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Crear Usuario 128px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Crear Usuario 128px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
