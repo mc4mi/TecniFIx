@@ -50,6 +50,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDetalleServicioCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetalleServicioCliente.Designer.cs">
+      <DependentUpon>frmDetalleServicioCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformacionCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformacionCliente.Designer.cs">
+      <DependentUpon>frmInformacionCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,14 +80,32 @@
     <Compile Include="frmMenuCliente.Designer.cs">
       <DependentUpon>frmMenuCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegistrarDispositivoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarDispositivoCliente.Designer.cs">
+      <DependentUpon>frmRegistrarDispositivoCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmRegistroUsuario.Designer.cs">
       <DependentUpon>frmRegistroUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSolicitarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSolicitarCliente.Designer.cs">
+      <DependentUpon>frmSolicitarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDetalleServicioCliente.resx">
+      <DependentUpon>frmDetalleServicioCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformacionCliente.resx">
+      <DependentUpon>frmInformacionCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -85,8 +115,14 @@
     <EmbeddedResource Include="frmMenuCliente.resx">
       <DependentUpon>frmMenuCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarDispositivoCliente.resx">
+      <DependentUpon>frmRegistrarDispositivoCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRegistroUsuario.resx">
       <DependentUpon>frmRegistroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSolicitarCliente.resx">
+      <DependentUpon>frmSolicitarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -125,6 +161,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoMediano.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bienvenida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Informacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoMediano.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Regitsro 128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Solicitud 128px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

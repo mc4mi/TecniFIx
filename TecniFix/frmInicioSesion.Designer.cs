@@ -112,7 +112,7 @@
             // panel2
             // 
             this.panel2.BackgroundImage = global::TecniFix.Properties.Resources.Usuario_128px;
-            this.panel2.Location = new System.Drawing.Point(268, 27);
+            this.panel2.Location = new System.Drawing.Point(286, 26);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(127, 130);
             this.panel2.TabIndex = 1;
@@ -122,7 +122,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(176, 150);
+            this.label1.Location = new System.Drawing.Point(192, 159);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(318, 65);
             this.label1.TabIndex = 0;

@@ -63,6 +63,16 @@ namespace TecniFix.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bienvenida {
+            get {
+                object obj = ResourceManager.GetObject("bienvenida", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Crear_Usuario_128px {
             get {
                 object obj = ResourceManager.GetObject("Crear Usuario 128px", resourceCulture);
@@ -83,6 +93,26 @@ namespace TecniFix.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FondoMediano {
+            get {
+                object obj = ResourceManager.GetObject("FondoMediano", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Informacion {
+            get {
+                object obj = ResourceManager.GetObject("Informacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Inicio {
             get {
                 object obj = ResourceManager.GetObject("Inicio", resourceCulture);
@@ -96,6 +126,36 @@ namespace TecniFix.Properties {
         internal static System.Drawing.Bitmap LogoGrande {
             get {
                 object obj = ResourceManager.GetObject("LogoGrande", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogoMediano {
+            get {
+                object obj = ResourceManager.GetObject("LogoMediano", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Regitsro_128px {
+            get {
+                object obj = ResourceManager.GetObject("Regitsro 128px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Solicitud_128px {
+            get {
+                object obj = ResourceManager.GetObject("Solicitud 128px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
