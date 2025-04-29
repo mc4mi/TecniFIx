@@ -228,6 +228,7 @@
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(48)))), ((int)(((byte)(255)))));
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.Control;
@@ -279,8 +280,8 @@
             // 
             // frmRegistroUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::TecniFix.Properties.Resources.Inicio;
             this.ClientSize = new System.Drawing.Size(1191, 669);
             this.Controls.Add(this.panel1);

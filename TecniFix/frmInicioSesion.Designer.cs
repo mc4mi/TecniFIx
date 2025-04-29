@@ -58,6 +58,7 @@
             // btnIniciar
             // 
             this.btnIniciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(48)))), ((int)(((byte)(255)))));
+            this.btnIniciar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIniciar.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar.ForeColor = System.Drawing.SystemColors.Control;
@@ -130,8 +131,8 @@
             // 
             // frmInicioSesion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::TecniFix.Properties.Resources.Inicio;
             this.ClientSize = new System.Drawing.Size(1191, 669);
             this.ControlBox = false;

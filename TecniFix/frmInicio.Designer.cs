@@ -50,6 +50,7 @@
             // btnDirigirInicioSesion
             // 
             this.btnDirigirInicioSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(48)))), ((int)(((byte)(255)))));
+            this.btnDirigirInicioSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDirigirInicioSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDirigirInicioSesion.Font = new System.Drawing.Font("Yu Gothic UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDirigirInicioSesion.ForeColor = System.Drawing.SystemColors.Control;
@@ -88,6 +89,7 @@
             // btnDirigirRegistroUsuario
             // 
             this.btnDirigirRegistroUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(48)))), ((int)(((byte)(255)))));
+            this.btnDirigirRegistroUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDirigirRegistroUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDirigirRegistroUsuario.Font = new System.Drawing.Font("Yu Gothic UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDirigirRegistroUsuario.ForeColor = System.Drawing.SystemColors.Control;
@@ -124,8 +126,8 @@
             // 
             // frmInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::TecniFix.Properties.Resources.Inicio;
             this.ClientSize = new System.Drawing.Size(1191, 669);
             this.Controls.Add(this.label2);

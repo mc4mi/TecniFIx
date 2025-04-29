@@ -61,6 +61,7 @@
             // btnDetalleServicio
             // 
             this.btnDetalleServicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(48)))), ((int)(((byte)(255)))));
+            this.btnDetalleServicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetalleServicio.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDetalleServicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDetalleServicio.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -76,6 +77,7 @@
             // btnSolicitarServicio
             // 
             this.btnSolicitarServicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(48)))), ((int)(((byte)(255)))));
+            this.btnSolicitarServicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSolicitarServicio.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSolicitarServicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSolicitarServicio.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -91,6 +93,7 @@
             // bbtnRegistrarComputador
             // 
             this.bbtnRegistrarComputador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(48)))), ((int)(((byte)(255)))));
+            this.bbtnRegistrarComputador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bbtnRegistrarComputador.Dock = System.Windows.Forms.DockStyle.Top;
             this.bbtnRegistrarComputador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bbtnRegistrarComputador.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,6 +109,7 @@
             // btnInformación
             // 
             this.btnInformación.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(48)))), ((int)(((byte)(255)))));
+            this.btnInformación.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInformación.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInformación.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnInformación.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -121,6 +125,7 @@
             // btnInicio
             // 
             this.btnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(48)))), ((int)(((byte)(255)))));
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnInicio.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -164,8 +169,8 @@
             // 
             // TecniFix
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1191, 669);
             this.Controls.Add(this.pnlInicio);
