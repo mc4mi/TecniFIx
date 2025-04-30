@@ -56,6 +56,24 @@
     <Compile Include="frmDetalleServicioCliente.Designer.cs">
       <DependentUpon>frmDetalleServicioCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDetallesServicioTecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetallesServicioTecnico.Designer.cs">
+      <DependentUpon>frmDetallesServicioTecnico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEnviarFacturaAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnviarFacturaAdministrador.Designer.cs">
+      <DependentUpon>frmEnviarFacturaAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionServiciosTecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionServiciosTecnico.Designer.cs">
+      <DependentUpon>frmGestionServiciosTecnico.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInformacionCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,11 +92,29 @@
     <Compile Include="frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMenuAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuAdministrador.Designer.cs">
+      <DependentUpon>frmMenuAdministrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMenuCliente.Designer.cs">
       <DependentUpon>frmMenuCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuTecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuTecnico.Designer.cs">
+      <DependentUpon>frmMenuTecnico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProgramacionServiciosTecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProgramacionServiciosTecnico.Designer.cs">
+      <DependentUpon>frmProgramacionServiciosTecnico.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegistrarDispositivoCliente.cs">
       <SubType>Form</SubType>
@@ -98,10 +134,25 @@
     <Compile Include="frmSolicitarCliente.Designer.cs">
       <DependentUpon>frmSolicitarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSolicitudesGestionadasAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSolicitudesGestionadasAdministrador.Designer.cs">
+      <DependentUpon>frmSolicitudesGestionadasAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerificarPreciosAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerificarPreciosAdministrador.Designer.cs">
+      <DependentUpon>frmVerificarPreciosAdministrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDetalleServicioCliente.resx">
       <DependentUpon>frmDetalleServicioCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionServiciosTecnico.resx">
+      <DependentUpon>frmGestionServiciosTecnico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInformacionCliente.resx">
       <DependentUpon>frmInformacionCliente.cs</DependentUpon>
@@ -112,8 +163,14 @@
     <EmbeddedResource Include="frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuAdministrador.resx">
+      <DependentUpon>frmMenuAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenuCliente.resx">
       <DependentUpon>frmMenuCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuTecnico.resx">
+      <DependentUpon>frmMenuTecnico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarDispositivoCliente.resx">
       <DependentUpon>frmRegistrarDispositivoCliente.cs</DependentUpon>
@@ -179,6 +236,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Solicitud 128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bienvenidaTecnico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bienvenidaAdministrador.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

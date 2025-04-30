@@ -1,6 +1,6 @@
 ﻿namespace TecniFix
 {
-    partial class TecniFix
+    partial class frmMenuCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TecniFix));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuCliente));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDetalleServicio = new System.Windows.Forms.Button();
             this.btnSolicitarServicio = new System.Windows.Forms.Button();
-            this.bbtnRegistrarComputador = new System.Windows.Forms.Button();
+            this.btnRegistrarComputador = new System.Windows.Forms.Button();
             this.btnInformación = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,7 +48,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.panel1.Controls.Add(this.btnDetalleServicio);
             this.panel1.Controls.Add(this.btnSolicitarServicio);
-            this.panel1.Controls.Add(this.bbtnRegistrarComputador);
+            this.panel1.Controls.Add(this.btnRegistrarComputador);
             this.panel1.Controls.Add(this.btnInformación);
             this.panel1.Controls.Add(this.btnInicio);
             this.panel1.Controls.Add(this.panel2);
@@ -90,21 +90,21 @@
             this.btnSolicitarServicio.UseVisualStyleBackColor = false;
             this.btnSolicitarServicio.Click += new System.EventHandler(this.button1_Click);
             // 
-            // bbtnRegistrarComputador
+            // btnRegistrarComputador
             // 
-            this.bbtnRegistrarComputador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(48)))), ((int)(((byte)(255)))));
-            this.bbtnRegistrarComputador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bbtnRegistrarComputador.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bbtnRegistrarComputador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bbtnRegistrarComputador.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bbtnRegistrarComputador.ForeColor = System.Drawing.Color.White;
-            this.bbtnRegistrarComputador.Location = new System.Drawing.Point(0, 221);
-            this.bbtnRegistrarComputador.Name = "bbtnRegistrarComputador";
-            this.bbtnRegistrarComputador.Size = new System.Drawing.Size(308, 43);
-            this.bbtnRegistrarComputador.TabIndex = 3;
-            this.bbtnRegistrarComputador.Text = "Registrar Computador";
-            this.bbtnRegistrarComputador.UseVisualStyleBackColor = false;
-            this.bbtnRegistrarComputador.Click += new System.EventHandler(this.bbtnRegistrarComputador_Click);
+            this.btnRegistrarComputador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(48)))), ((int)(((byte)(255)))));
+            this.btnRegistrarComputador.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrarComputador.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegistrarComputador.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegistrarComputador.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarComputador.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrarComputador.Location = new System.Drawing.Point(0, 221);
+            this.btnRegistrarComputador.Name = "btnRegistrarComputador";
+            this.btnRegistrarComputador.Size = new System.Drawing.Size(308, 43);
+            this.btnRegistrarComputador.TabIndex = 3;
+            this.btnRegistrarComputador.Text = "Registrar Computador";
+            this.btnRegistrarComputador.UseVisualStyleBackColor = false;
+            this.btnRegistrarComputador.Click += new System.EventHandler(this.bbtnRegistrarComputador_Click);
             // 
             // btnInformación
             // 
@@ -159,6 +159,7 @@
             // 
             // picBienvenida
             // 
+            this.picBienvenida.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picBienvenida.Image = global::TecniFix.Properties.Resources.bienvenida;
             this.picBienvenida.Location = new System.Drawing.Point(0, 0);
             this.picBienvenida.Name = "picBienvenida";
@@ -167,7 +168,7 @@
             this.picBienvenida.TabStop = false;
             this.picBienvenida.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // TecniFix
+            // frmMenuCliente
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -179,10 +180,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "TecniFix";
+            this.Name = "frmMenuCliente";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TecniFix";
+            this.Text = "TecniFix Cliente";
             this.Load += new System.EventHandler(this.frmMenuCliente_Load);
             this.panel1.ResumeLayout(false);
             this.pnlInicio.ResumeLayout(false);
@@ -195,7 +196,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlInicio;
-        private System.Windows.Forms.Button bbtnRegistrarComputador;
+        private System.Windows.Forms.Button btnRegistrarComputador;
         private System.Windows.Forms.Button btnInformación;
         private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Panel panel2;

@@ -73,6 +73,26 @@ namespace TecniFix.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bienvenidaAdministrador {
+            get {
+                object obj = ResourceManager.GetObject("bienvenidaAdministrador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bienvenidaTecnico {
+            get {
+                object obj = ResourceManager.GetObject("bienvenidaTecnico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Crear_Usuario_128px {
             get {
                 object obj = ResourceManager.GetObject("Crear Usuario 128px", resourceCulture);

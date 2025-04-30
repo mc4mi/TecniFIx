@@ -35,7 +35,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtboxContraseña = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtboxDireccion = new System.Windows.Forms.TextBox();
+            this.txtboxCedula = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtboxTelefono = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtboxContraseña);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtboxDireccion);
+            this.panel1.Controls.Add(this.txtboxCedula);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtboxTelefono);
             this.panel1.Controls.Add(this.label5);
@@ -130,19 +130,19 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(335, 329);
+            this.label7.Location = new System.Drawing.Point(355, 327);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 30);
+            this.label7.Size = new System.Drawing.Size(77, 30);
             this.label7.TabIndex = 23;
-            this.label7.Text = "Dirección";
+            this.label7.Text = "Cédula";
             // 
-            // txtboxDireccion
+            // txtboxCedula
             // 
-            this.txtboxDireccion.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxDireccion.Location = new System.Drawing.Point(435, 326);
-            this.txtboxDireccion.Name = "txtboxDireccion";
-            this.txtboxDireccion.Size = new System.Drawing.Size(188, 35);
-            this.txtboxDireccion.TabIndex = 22;
+            this.txtboxCedula.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxCedula.Location = new System.Drawing.Point(435, 324);
+            this.txtboxCedula.Name = "txtboxCedula";
+            this.txtboxCedula.Size = new System.Drawing.Size(188, 35);
+            this.txtboxCedula.TabIndex = 22;
             // 
             // label6
             // 
@@ -311,7 +311,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtboxContraseña;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtboxDireccion;
+        private System.Windows.Forms.TextBox txtboxCedula;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtboxTelefono;
         private System.Windows.Forms.Label label5;

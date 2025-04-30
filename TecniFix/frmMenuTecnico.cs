@@ -11,15 +11,15 @@ using System.Windows.Forms;
 
 namespace TecniFix
 {
-    public partial class frmMenuCliente: Form
+    public partial class frmMenuTecnico: Form
     {
         private Form currentFormularioHijo;
-        public frmMenuCliente()
+        public frmMenuTecnico()
         {
             InitializeComponent();
         }
 
-        [DllImport("User32,DLL",EntryPoint = "ReleaseCapture")]
+        [DllImport("User32,DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("User32,DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(IntPtr hwnd, int wMsg, int wParam, int lParam);
@@ -37,16 +37,21 @@ namespace TecniFix
             pnlInicio.Controls.Add(formHijo);
             pnlInicio.Tag = formHijo;
             formHijo.BringToFront();
-            formHijo.Show(); 
+            formHijo.Show();
         }
 
         private void frmMenuCliente_Load(object sender, EventArgs e)
         {
-            picBienvenida = new PictureBox();
-            picBienvenida.Image = Properties.Resources.bienvenida;
-            picBienvenida.SizeMode = PictureBoxSizeMode.StretchImage;
-            picBienvenida.Dock = DockStyle.Fill;
-            pnlInicio.Controls.Add(picBienvenida);
+            picBienvenidaTecnico = new PictureBox();
+            picBienvenidaTecnico.Image = Properties.Resources.bienvenidaTecnico;
+            picBienvenidaTecnico.SizeMode = PictureBoxSizeMode.StretchImage;
+            picBienvenidaTecnico.Dock = DockStyle.Fill;
+            pnlInicio.Controls.Add(picBienvenidaTecnico);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -59,32 +64,22 @@ namespace TecniFix
             }
 
             // Restaurar imagen de bienvenida u otros controles
-            pnlInicio.Controls.Add(picBienvenida);
+            pnlInicio.Controls.Add(picBienvenidaTecnico);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnGestionServicios_Click(object sender, EventArgs e)
         {
-
+            abrirFormularioHijo(new frmGestionServiciosTecnico());
         }
 
-        private void btnInformación_Click(object sender, EventArgs e)
+        private void btnProgramacionServicios_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new frmInformacionCliente());
-        }
-
-        private void bbtnRegistrarComputador_Click(object sender, EventArgs e)
-        {
-            abrirFormularioHijo(new frmRegistrarDispositivoCliente());
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            abrirFormularioHijo(new frmSolicitadCliente());
+            abrirFormularioHijo(new frmProgramacionServiciosTecnico());
         }
 
         private void btnDetalleServicio_Click(object sender, EventArgs e)
         {
-            abrirFormularioHijo(new frmDetalleServicioCliente());
+            abrirFormularioHijo(new frmDetallesServicioTecnico());
         }
     }
 }
