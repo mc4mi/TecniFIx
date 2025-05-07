@@ -16,5 +16,12 @@ namespace TecniFix
         {
             InitializeComponent();
         }
+
+        private void frmDetalleServicioCliente_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'db_TecniFixDataSet.Solicitud' Puede moverla o quitarla según sea necesario.
+            this.solicitudTableAdapter.Fill(this.db_TecniFixDataSet.Solicitud);
+
+        }
     }
 }

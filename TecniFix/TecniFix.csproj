@@ -50,6 +50,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="db_TecniFixDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_TecniFixDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmDetalleServicioCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +191,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="db_TecniFixDataSet.xsc">
+      <DependentUpon>db_TecniFixDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_TecniFixDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_TecniFixDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_TecniFixDataSet.xss">
+      <DependentUpon>db_TecniFixDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -242,6 +258,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bienvenidaAdministrador.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo largo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
