@@ -31,5 +31,20 @@ namespace TecniFix
         {
 
         }
+
+        private void btnDirigirInicioSesion_Click(object sender, EventArgs e)
+        {
+            frmInicioSesion loginForm = new frmInicioSesion();
+            loginForm.Show();
+            this.Hide(); // Oculta el formulario actual
+        }
+
+        private void btnDirigirRegistroUsuario_Click(object sender, EventArgs e)
+        {
+            frmRegistroUsuario loginForm = new frmRegistroUsuario();
+            loginForm.Show();
+            this.Hide(); // Oculta el formulario actual
+        }
     }
 }
+

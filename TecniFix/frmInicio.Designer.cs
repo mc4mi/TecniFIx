@@ -60,6 +60,7 @@
             this.btnDirigirInicioSesion.TabIndex = 1;
             this.btnDirigirInicioSesion.Text = "Iniciar Sesión";
             this.btnDirigirInicioSesion.UseVisualStyleBackColor = false;
+            this.btnDirigirInicioSesion.Click += new System.EventHandler(this.btnDirigirInicioSesion_Click);
             // 
             // textBox1
             // 
@@ -99,6 +100,7 @@
             this.btnDirigirRegistroUsuario.TabIndex = 4;
             this.btnDirigirRegistroUsuario.Text = "Registrarse";
             this.btnDirigirRegistroUsuario.UseVisualStyleBackColor = false;
+            this.btnDirigirRegistroUsuario.Click += new System.EventHandler(this.btnDirigirRegistroUsuario_Click);
             // 
             // label1
             // 

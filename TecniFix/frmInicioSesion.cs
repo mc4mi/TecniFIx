@@ -21,5 +21,23 @@ namespace TecniFix
         {
 
         }
+        //Botón de Volver al inicio
+        private void btnVolverInicio_Click(object sender, EventArgs e)
+        {
+            frmInicio inicioForm = new frmInicio();
+            inicioForm.Show();
+            this.Close();
+        }
+
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
