@@ -37,6 +37,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlInicio = new System.Windows.Forms.Panel();
             this.picBienvenidaAdministrador = new System.Windows.Forms.PictureBox();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBienvenidaAdministrador)).BeginInit();
@@ -45,6 +46,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.panel1.Controls.Add(this.btnCerrarSesion);
             this.panel1.Controls.Add(this.btnEnviarFactura);
             this.panel1.Controls.Add(this.btnVerificarPrecios);
             this.panel1.Controls.Add(this.btnSolicitudesGestionadas);
@@ -148,6 +150,22 @@
             this.picBienvenidaAdministrador.TabIndex = 0;
             this.picBienvenidaAdministrador.TabStop = false;
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(36)))), ((int)(((byte)(239)))));
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 307);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(308, 43);
+            this.btnCerrarSesion.TabIndex = 5;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
             // frmMenuAdministrador
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -178,5 +196,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pnlInicio;
         private System.Windows.Forms.PictureBox picBienvenidaAdministrador;
+        private System.Windows.Forms.Button btnCerrarSesion;
     }
 }

@@ -31,14 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroUsuario));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtboxContraseña = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtboxCedula = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtboxTelefono = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtboxCelular = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtboxCorreo = new System.Windows.Forms.TextBox();
@@ -49,21 +48,22 @@
             this.txtboxNombre = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbRegistrarse = new System.Windows.Forms.Label();
+            this.lb = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.panel1.Controls.Add(this.lb);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cmbTipoUsuario);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtboxContraseña);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtboxCedula);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtboxTelefono);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtboxCelular);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtboxCorreo);
@@ -85,15 +85,11 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Name = "label1";
             // 
-            // comboBox1
+            // cmbTipoUsuario
             // 
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            resources.GetString("comboBox1.Items"),
-            resources.GetString("comboBox1.Items1"),
-            resources.GetString("comboBox1.Items2")});
-            this.comboBox1.Name = "comboBox1";
+            resources.ApplyResources(this.cmbTipoUsuario, "cmbTipoUsuario");
+            this.cmbTipoUsuario.FormattingEnabled = true;
+            this.cmbTipoUsuario.Name = "cmbTipoUsuario";
             // 
             // label8
             // 
@@ -131,14 +127,6 @@
             // 
             resources.ApplyResources(this.txtboxTelefono, "txtboxTelefono");
             this.txtboxTelefono.Name = "txtboxTelefono";
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Name = "label5";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtboxCelular
             // 
@@ -204,6 +192,13 @@
             this.lbRegistrarse.ForeColor = System.Drawing.Color.White;
             this.lbRegistrarse.Name = "lbRegistrarse";
             // 
+            // lb
+            // 
+            resources.ApplyResources(this.lb, "lb");
+            this.lb.BackColor = System.Drawing.Color.Transparent;
+            this.lb.ForeColor = System.Drawing.Color.White;
+            this.lb.Name = "lb";
+            // 
             // frmRegistroUsuario
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -238,11 +233,11 @@
         private System.Windows.Forms.TextBox txtboxCedula;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtboxTelefono;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtboxCelular;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtboxCorreo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbTipoUsuario;
+        private System.Windows.Forms.Label lb;
     }
 }

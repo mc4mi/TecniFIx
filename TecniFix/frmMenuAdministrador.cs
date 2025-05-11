@@ -75,5 +75,15 @@ namespace TecniFix
         {
             abrirFormularioHijo(new frmEnviarFacturaAdministrador());
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            // Mostrar el formulario de inicio de sesión nuevamente
+            frmInicio frmInicio = new frmInicio();
+            frmInicio.Show();
+
+            // Cerrar el formulario actual (el menú del cliente, técnico o administrador)
+            this.Hide();
+        }
     }
 }
