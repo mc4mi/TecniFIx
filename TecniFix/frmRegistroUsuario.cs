@@ -48,6 +48,7 @@ namespace TecniFix
             string telefono = txtboxTelefono.Text.Trim();
             string celular = txtboxCelular.Text.Trim();
             string cedula = txtboxCedula.Text.Trim();
+            string codigo = txtboxCodigo.Text.Trim();
             string tipoUsuario = cmbTipoUsuario.SelectedItem?.ToString();
 
             // Validar que los campos no estén vacío
@@ -104,6 +105,13 @@ namespace TecniFix
                 return;
             }
 
+            // Validar que el código sea obligatorio solo para Técnico y Administrador
+            if ((tipoUsuario == "Técnico" || tipoUsuario == "Administrador") && string.IsNullOrWhiteSpace(codigo))
+            {
+                MessageBox.Show("El campo código es obligatorio para técnicos y administradores.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             // Guardar los datos en la base de datos
             try
             {
@@ -145,8 +153,8 @@ namespace TecniFix
                         return;
                     }
 
-                    string query = $"INSERT INTO {tabla} (nombre, apellido, correo, contrasena, telefono, celular, cedula) " +
-                                   "VALUES (@nombre, @apellido, @correo, @contrasena, @telefono, @celular, @cedula)";
+                    string query = $"INSERT INTO {tabla} (nombre, apellido, correo, contrasena, telefono, celular, cedula, codigo) " +
+                                   "VALUES (@nombre, @apellido, @correo, @contrasena, @telefono, @celular, @cedula, @codigo)";
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@nombre", nombre);
                     cmd.Parameters.AddWithValue("@apellido", apellido);
@@ -155,6 +163,7 @@ namespace TecniFix
                     cmd.Parameters.AddWithValue("@telefono", telefono);
                     cmd.Parameters.AddWithValue("@celular", celular);
                     cmd.Parameters.AddWithValue("@cedula", cedula);
+                    cmd.Parameters.AddWithValue("@codigo", codigo);
 
                     int resultado = cmd.ExecuteNonQuery();
 
@@ -185,6 +194,16 @@ namespace TecniFix
         private void txtboxNombre_TextChanged(object sender, EventArgs e)
         {
  
+        }
+
+        private void cmbTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string tipoUsuario = cmbTipoUsuario.SelectedItem.ToString();
+
+            bool mostrar = (tipoUsuario == "Técnico" || tipoUsuario == "Administrador");
+
+            lbCodigo.Visible = mostrar;
+            txtboxCodigo.Visible = mostrar;
         }
     }
 }

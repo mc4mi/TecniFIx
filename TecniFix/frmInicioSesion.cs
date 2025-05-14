@@ -45,6 +45,7 @@ namespace TecniFix
             string cedula = txtboxCedula.Text.Trim();
             string contrasena = txtboxContraseña.Text.Trim();
             string tipoUsuario = cmbTipoUsuario.Text;
+            string codigo = txtboxCodigo.Text.Trim();
 
             // Validar que los campos no estén vacío
             if (string.IsNullOrWhiteSpace(tipoUsuario))
@@ -84,6 +85,12 @@ namespace TecniFix
                 MessageBox.Show("Seleccione un tipo de usuario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            // Validar que el código sea obligatorio solo para Técnico y Administrador
+            if ((tipoUsuario == "Técnico" || tipoUsuario == "Administrador") && string.IsNullOrWhiteSpace(codigo))
+            {
+                MessageBox.Show("El campo código es obligatorio para técnicos y administradores.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             // Determinar la tabla según el tipo de usuario
             string tabla = "";
 
@@ -103,30 +110,47 @@ namespace TecniFix
             {
                 using (SqlConnection conn = Database.GetConnection())
                 {
-                    string query = $"SELECT COUNT(*) FROM {tabla} WHERE cedula = @cedula AND contrasena = @contrasena";
+                    string query;
+
+                    if (tipoUsuario == "Cliente")
+                    {
+                        query = $"SELECT COUNT(*) FROM {tabla} WHERE cedula = @cedula AND contrasena = @contrasena";
+                    }
+                    else
+                    {
+                        query = $"SELECT COUNT(*) FROM {tabla} WHERE cedula = @cedula AND contrasena = @contrasena AND codigo = @codigo";
+                    }
+
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@cedula", cedula);
                     cmd.Parameters.AddWithValue("@contrasena", contrasena);
+                    if (tipoUsuario != "Cliente")
+                    {
+                        cmd.Parameters.AddWithValue("@codigo", codigo);
+                    }
 
                     int existe = (int)cmd.ExecuteScalar();
 
                     if (existe > 0)
                     {
-                        Form destino;
+                        Form destino = null;
 
                         if (tipoUsuario == "Cliente")
                             destino = new frmMenuCliente();
                         else if (tipoUsuario == "Técnico")
                             destino = new frmMenuTecnico();
-                        else
+                        else if (tipoUsuario == "Administrador")
                             destino = new frmMenuAdministrador();
 
-                        destino.Show();
-                        this.Hide();
+                        if (destino != null)
+                        {
+                            destino.Show();
+                            this.Hide();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Cédula o contraseña incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Credenciales incorrectas.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -135,9 +159,21 @@ namespace TecniFix
                 MessageBox.Show("Error al iniciar sesión:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        
     private void frmInicioSesion_Load(object sender, EventArgs e)
         {
 
+        }
+
+        //Mostrar o ocultar campo de código empleado
+        private void cmbTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string tipoUsuario = cmbTipoUsuario.SelectedItem.ToString();
+
+            bool mostrar = (tipoUsuario == "Técnico" || tipoUsuario == "Administrador");
+
+            lbCodigo.Visible = mostrar;
+            txtboxCodigo.Visible = mostrar;
         }
     }
 }

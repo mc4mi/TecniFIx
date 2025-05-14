@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroUsuario));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -48,13 +49,16 @@
             this.txtboxNombre = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbRegistrarse = new System.Windows.Forms.Label();
-            this.lb = new System.Windows.Forms.Label();
+            this.lbCodigo = new System.Windows.Forms.Label();
+            this.txtboxCodigo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.panel1.Controls.Add(this.lbCodigo);
+            this.panel1.Controls.Add(this.txtboxCodigo);
             this.panel1.Controls.Add(this.lb);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cmbTipoUsuario);
@@ -78,6 +82,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // lb
+            // 
+            resources.ApplyResources(this.lb, "lb");
+            this.lb.BackColor = System.Drawing.Color.Transparent;
+            this.lb.ForeColor = System.Drawing.Color.White;
+            this.lb.Name = "lb";
+            // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
@@ -90,6 +101,7 @@
             resources.ApplyResources(this.cmbTipoUsuario, "cmbTipoUsuario");
             this.cmbTipoUsuario.FormattingEnabled = true;
             this.cmbTipoUsuario.Name = "cmbTipoUsuario";
+            this.cmbTipoUsuario.SelectedIndexChanged += new System.EventHandler(this.cmbTipoUsuario_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -192,12 +204,17 @@
             this.lbRegistrarse.ForeColor = System.Drawing.Color.White;
             this.lbRegistrarse.Name = "lbRegistrarse";
             // 
-            // lb
+            // lbCodigo
             // 
-            resources.ApplyResources(this.lb, "lb");
-            this.lb.BackColor = System.Drawing.Color.Transparent;
-            this.lb.ForeColor = System.Drawing.Color.White;
-            this.lb.Name = "lb";
+            resources.ApplyResources(this.lbCodigo, "lbCodigo");
+            this.lbCodigo.BackColor = System.Drawing.Color.Transparent;
+            this.lbCodigo.ForeColor = System.Drawing.Color.White;
+            this.lbCodigo.Name = "lbCodigo";
+            // 
+            // txtboxCodigo
+            // 
+            resources.ApplyResources(this.txtboxCodigo, "txtboxCodigo");
+            this.txtboxCodigo.Name = "txtboxCodigo";
             // 
             // frmRegistroUsuario
             // 
@@ -239,5 +256,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbTipoUsuario;
         private System.Windows.Forms.Label lb;
+        private System.Windows.Forms.Label lbCodigo;
+        private System.Windows.Forms.TextBox txtboxCodigo;
     }
 }

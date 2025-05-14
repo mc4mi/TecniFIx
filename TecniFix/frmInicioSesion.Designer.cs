@@ -40,12 +40,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbCodigo = new System.Windows.Forms.Label();
+            this.txtboxCodigo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.panel1.Controls.Add(this.lbCodigo);
+            this.panel1.Controls.Add(this.txtboxCodigo);
             this.panel1.Controls.Add(this.cmbTipoUsuario);
             this.panel1.Controls.Add(this.txtboxCedula);
             this.panel1.Controls.Add(this.label2);
@@ -56,9 +60,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(270, 85);
+            this.panel1.Location = new System.Drawing.Point(261, 45);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(661, 508);
+            this.panel1.Size = new System.Drawing.Size(674, 572);
             this.panel1.TabIndex = 0;
             // 
             // cmbTipoUsuario
@@ -69,11 +73,12 @@
             this.cmbTipoUsuario.Name = "cmbTipoUsuario";
             this.cmbTipoUsuario.Size = new System.Drawing.Size(218, 33);
             this.cmbTipoUsuario.TabIndex = 18;
+            this.cmbTipoUsuario.SelectedIndexChanged += new System.EventHandler(this.cmbTipoUsuario_SelectedIndexChanged);
             // 
             // txtboxCedula
             // 
             this.txtboxCedula.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxCedula.Location = new System.Drawing.Point(286, 277);
+            this.txtboxCedula.Location = new System.Drawing.Point(286, 280);
             this.txtboxCedula.Name = "txtboxCedula";
             this.txtboxCedula.Size = new System.Drawing.Size(218, 33);
             this.txtboxCedula.TabIndex = 17;
@@ -98,7 +103,7 @@
             this.btnVolverInicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVolverInicio.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolverInicio.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnVolverInicio.Location = new System.Drawing.Point(219, 449);
+            this.btnVolverInicio.Location = new System.Drawing.Point(224, 498);
             this.btnVolverInicio.Name = "btnVolverInicio";
             this.btnVolverInicio.Size = new System.Drawing.Size(211, 35);
             this.btnVolverInicio.TabIndex = 15;
@@ -113,7 +118,7 @@
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIniciar.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnIniciar.Location = new System.Drawing.Point(244, 382);
+            this.btnIniciar.Location = new System.Drawing.Point(253, 430);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(169, 51);
             this.btnIniciar.TabIndex = 14;
@@ -137,7 +142,7 @@
             // txtboxContraseña
             // 
             this.txtboxContraseña.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxContraseña.Location = new System.Drawing.Point(286, 322);
+            this.txtboxContraseña.Location = new System.Drawing.Point(286, 325);
             this.txtboxContraseña.Name = "txtboxContraseña";
             this.txtboxContraseña.Size = new System.Drawing.Size(218, 33);
             this.txtboxContraseña.TabIndex = 11;
@@ -173,6 +178,29 @@
             this.label1.Size = new System.Drawing.Size(318, 65);
             this.label1.TabIndex = 0;
             this.label1.Text = "Iniciar Sesión";
+            // 
+            // lbCodigo
+            // 
+            this.lbCodigo.AutoSize = true;
+            this.lbCodigo.BackColor = System.Drawing.Color.Transparent;
+            this.lbCodigo.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F);
+            this.lbCodigo.ForeColor = System.Drawing.Color.White;
+            this.lbCodigo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbCodigo.Location = new System.Drawing.Point(109, 373);
+            this.lbCodigo.Name = "lbCodigo";
+            this.lbCodigo.Size = new System.Drawing.Size(162, 25);
+            this.lbCodigo.TabIndex = 32;
+            this.lbCodigo.Text = "Código Empleado";
+            this.lbCodigo.Visible = false;
+            // 
+            // txtboxCodigo
+            // 
+            this.txtboxCodigo.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F);
+            this.txtboxCodigo.Location = new System.Drawing.Point(286, 370);
+            this.txtboxCodigo.Name = "txtboxCodigo";
+            this.txtboxCodigo.Size = new System.Drawing.Size(218, 33);
+            this.txtboxCodigo.TabIndex = 31;
+            this.txtboxCodigo.Visible = false;
             // 
             // frmInicioSesion
             // 
@@ -210,5 +238,7 @@
         private System.Windows.Forms.TextBox txtboxCedula;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbTipoUsuario;
+        private System.Windows.Forms.Label lbCodigo;
+        private System.Windows.Forms.TextBox txtboxCodigo;
     }
 }
