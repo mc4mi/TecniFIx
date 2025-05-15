@@ -31,19 +31,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarDispositivoCliente));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtboxCedulaCliente = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtTiempoUso = new System.Windows.Forms.TextBox();
+            this.txtboxTiempoUso = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtAlmacenamiento = new System.Windows.Forms.TextBox();
+            this.txtboxAlmacenamiento = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtRam = new System.Windows.Forms.TextBox();
+            this.txtboxRam = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtProcesador = new System.Windows.Forms.TextBox();
+            this.txtboxProcesador = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.txtboxModelo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtMarca = new System.Windows.Forms.TextBox();
+            this.txtboxMarca = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,6 +58,8 @@
             this.txtboxNombre = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtboxNumeroSerie = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -86,19 +90,23 @@
             // panel2
             // 
             this.panel2.BackgroundImage = global::TecniFix.Properties.Resources.FondoMediano;
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.txtboxNumeroSerie);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.txtboxCedulaCliente);
             this.panel2.Controls.Add(this.btnGuardar);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.txtTiempoUso);
+            this.panel2.Controls.Add(this.txtboxTiempoUso);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.txtAlmacenamiento);
+            this.panel2.Controls.Add(this.txtboxAlmacenamiento);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.txtRam);
+            this.panel2.Controls.Add(this.txtboxRam);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.txtProcesador);
+            this.panel2.Controls.Add(this.txtboxProcesador);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.txtModelo);
+            this.panel2.Controls.Add(this.txtboxModelo);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.txtMarca);
+            this.panel2.Controls.Add(this.txtboxMarca);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -106,6 +114,28 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(867, 630);
             this.panel2.TabIndex = 19;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(40, 318);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(147, 30);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "Cédula Cliente";
+            // 
+            // txtboxCedulaCliente
+            // 
+            this.txtboxCedulaCliente.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxCedulaCliente.ForeColor = System.Drawing.Color.Black;
+            this.txtboxCedulaCliente.Location = new System.Drawing.Point(191, 315);
+            this.txtboxCedulaCliente.Name = "txtboxCedulaCliente";
+            this.txtboxCedulaCliente.Size = new System.Drawing.Size(188, 35);
+            this.txtboxCedulaCliente.TabIndex = 24;
             // 
             // btnGuardar
             // 
@@ -114,12 +144,13 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnGuardar.Location = new System.Drawing.Point(334, 496);
+            this.btnGuardar.Location = new System.Drawing.Point(346, 532);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(169, 70);
             this.btnGuardar.TabIndex = 23;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label12
             // 
@@ -127,19 +158,19 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(426, 415);
+            this.label12.Location = new System.Drawing.Point(431, 479);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(123, 30);
             this.label12.TabIndex = 22;
             this.label12.Text = "Tiempo Uso";
             // 
-            // txtTiempoUso
+            // txtboxTiempoUso
             // 
-            this.txtTiempoUso.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTiempoUso.Location = new System.Drawing.Point(565, 413);
-            this.txtTiempoUso.Name = "txtTiempoUso";
-            this.txtTiempoUso.Size = new System.Drawing.Size(188, 35);
-            this.txtTiempoUso.TabIndex = 21;
+            this.txtboxTiempoUso.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxTiempoUso.Location = new System.Drawing.Point(570, 477);
+            this.txtboxTiempoUso.Name = "txtboxTiempoUso";
+            this.txtboxTiempoUso.Size = new System.Drawing.Size(188, 35);
+            this.txtboxTiempoUso.TabIndex = 21;
             // 
             // label11
             // 
@@ -147,22 +178,21 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(389, 356);
+            this.label11.Location = new System.Drawing.Point(394, 420);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(170, 30);
             this.label11.TabIndex = 20;
             this.label11.Text = "Almacenamiento";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // txtAlmacenamiento
+            // txtboxAlmacenamiento
             // 
-            this.txtAlmacenamiento.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAlmacenamiento.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtAlmacenamiento.Location = new System.Drawing.Point(565, 356);
-            this.txtAlmacenamiento.Name = "txtAlmacenamiento";
-            this.txtAlmacenamiento.Size = new System.Drawing.Size(188, 35);
-            this.txtAlmacenamiento.TabIndex = 19;
-            this.txtAlmacenamiento.Text = "GB";
+            this.txtboxAlmacenamiento.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxAlmacenamiento.ForeColor = System.Drawing.Color.Black;
+            this.txtboxAlmacenamiento.Location = new System.Drawing.Point(570, 420);
+            this.txtboxAlmacenamiento.Name = "txtboxAlmacenamiento";
+            this.txtboxAlmacenamiento.Size = new System.Drawing.Size(188, 35);
+            this.txtboxAlmacenamiento.TabIndex = 19;
             // 
             // label6
             // 
@@ -170,21 +200,20 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(504, 300);
+            this.label6.Location = new System.Drawing.Point(509, 364);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 30);
             this.label6.TabIndex = 18;
             this.label6.Text = "Ram";
             // 
-            // txtRam
+            // txtboxRam
             // 
-            this.txtRam.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRam.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtRam.Location = new System.Drawing.Point(565, 300);
-            this.txtRam.Name = "txtRam";
-            this.txtRam.Size = new System.Drawing.Size(188, 35);
-            this.txtRam.TabIndex = 17;
-            this.txtRam.Text = "GB";
+            this.txtboxRam.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxRam.ForeColor = System.Drawing.Color.Black;
+            this.txtboxRam.Location = new System.Drawing.Point(570, 364);
+            this.txtboxRam.Name = "txtboxRam";
+            this.txtboxRam.Size = new System.Drawing.Size(188, 35);
+            this.txtboxRam.TabIndex = 17;
             // 
             // label7
             // 
@@ -192,21 +221,20 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(64, 414);
+            this.label7.Location = new System.Drawing.Point(69, 478);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(116, 30);
             this.label7.TabIndex = 16;
             this.label7.Text = "Procesador";
             // 
-            // txtProcesador
+            // txtboxProcesador
             // 
-            this.txtProcesador.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProcesador.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtProcesador.Location = new System.Drawing.Point(186, 411);
-            this.txtProcesador.Name = "txtProcesador";
-            this.txtProcesador.Size = new System.Drawing.Size(188, 35);
-            this.txtProcesador.TabIndex = 15;
-            this.txtProcesador.Text = "Ej. Intel, Ryzen...";
+            this.txtboxProcesador.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxProcesador.ForeColor = System.Drawing.Color.Black;
+            this.txtboxProcesador.Location = new System.Drawing.Point(191, 475);
+            this.txtboxProcesador.Name = "txtboxProcesador";
+            this.txtboxProcesador.Size = new System.Drawing.Size(188, 35);
+            this.txtboxProcesador.TabIndex = 15;
             // 
             // label8
             // 
@@ -214,19 +242,19 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(96, 359);
+            this.label8.Location = new System.Drawing.Point(101, 423);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 30);
             this.label8.TabIndex = 14;
             this.label8.Text = "Modelo";
             // 
-            // txtModelo
+            // txtboxModelo
             // 
-            this.txtModelo.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(186, 356);
-            this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(188, 35);
-            this.txtModelo.TabIndex = 13;
+            this.txtboxModelo.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxModelo.Location = new System.Drawing.Point(191, 420);
+            this.txtboxModelo.Name = "txtboxModelo";
+            this.txtboxModelo.Size = new System.Drawing.Size(188, 35);
+            this.txtboxModelo.TabIndex = 13;
             // 
             // label9
             // 
@@ -234,21 +262,20 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(109, 305);
+            this.label9.Location = new System.Drawing.Point(114, 369);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 30);
             this.label9.TabIndex = 12;
             this.label9.Text = "Marca";
             // 
-            // txtMarca
+            // txtboxMarca
             // 
-            this.txtMarca.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtMarca.Location = new System.Drawing.Point(186, 302);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(188, 35);
-            this.txtMarca.TabIndex = 11;
-            this.txtMarca.Text = "Ej. Dell, Asus...";
+            this.txtboxMarca.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxMarca.ForeColor = System.Drawing.Color.Black;
+            this.txtboxMarca.Location = new System.Drawing.Point(191, 366);
+            this.txtboxMarca.Name = "txtboxMarca";
+            this.txtboxMarca.Size = new System.Drawing.Size(188, 35);
+            this.txtboxMarca.TabIndex = 11;
             // 
             // pictureBox2
             // 
@@ -377,6 +404,27 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Registra tu Computador";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(419, 316);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(140, 30);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "Número Serie";
+            // 
+            // txtboxNumeroSerie
+            // 
+            this.txtboxNumeroSerie.Font = new System.Drawing.Font("Yu Gothic UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxNumeroSerie.ForeColor = System.Drawing.Color.Black;
+            this.txtboxNumeroSerie.Location = new System.Drawing.Point(570, 313);
+            this.txtboxNumeroSerie.Name = "txtboxNumeroSerie";
+            this.txtboxNumeroSerie.Size = new System.Drawing.Size(188, 35);
+            this.txtboxNumeroSerie.TabIndex = 26;
+            // 
             // frmRegistrarDispositivoCliente
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -413,19 +461,23 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtAlmacenamiento;
+        private System.Windows.Forms.TextBox txtboxAlmacenamiento;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtRam;
+        private System.Windows.Forms.TextBox txtboxRam;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtProcesador;
+        private System.Windows.Forms.TextBox txtboxProcesador;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtModelo;
+        private System.Windows.Forms.TextBox txtboxModelo;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtMarca;
+        private System.Windows.Forms.TextBox txtboxMarca;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtTiempoUso;
+        private System.Windows.Forms.TextBox txtboxTiempoUso;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtboxCedulaCliente;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtboxNumeroSerie;
     }
 }

@@ -42,7 +42,7 @@ namespace TecniFix
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             // Obtener los valores de los campos de texto y el combo box
-            string cedula = txtboxCedula.Text.Trim();
+            string id = txtboxCedula.Text.Trim(); // cedula se usa como ID
             string contrasena = txtboxContraseña.Text.Trim();
             string tipoUsuario = cmbTipoUsuario.Text;
             string codigo = txtboxCodigo.Text.Trim();
@@ -55,19 +55,19 @@ namespace TecniFix
             }
             // Validar que la cédula y la contraseña no estén vacías
 
-            if (string.IsNullOrWhiteSpace(cedula) || string.IsNullOrWhiteSpace(contrasena))
+            if (string.IsNullOrWhiteSpace(id) || string.IsNullOrWhiteSpace(contrasena))
             {
                 MessageBox.Show("Ingrese la cédula y la contraseña.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             // Validar que la cédula contenga solo dígitos
-            if (!System.Text.RegularExpressions.Regex.IsMatch(cedula, @"^\d+$"))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(id, @"^\d+$"))
             {
                 MessageBox.Show("La cédula debe contener solo dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             // Validar que la cédula tenga 10 dígitos
-            if (cedula.Length != 10)
+            if (id.Length != 10)
             {
                 MessageBox.Show("La cédula debe tener 10 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -91,15 +91,26 @@ namespace TecniFix
                 MessageBox.Show("El campo código es obligatorio para técnicos y administradores.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            // Determinar la tabla según el tipo de usuario
-            string tabla = "";
+            
+
+            // Determinar tabla y campo de ID
+            string tabla = "", campoID = "";
 
             if (tipoUsuario == "Cliente")
+            {
                 tabla = "Cliente";
+                campoID = "id_cliente";
+            }
             else if (tipoUsuario == "Técnico")
+            {
                 tabla = "Tecnico";
+                campoID = "id_tecnico";
+            }
             else if (tipoUsuario == "Administrador")
+            {
                 tabla = "Administrador";
+                campoID = "id_admin";
+            }
             else
             {
                 MessageBox.Show("Seleccione un tipo de usuario válido.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -110,19 +121,20 @@ namespace TecniFix
             {
                 using (SqlConnection conn = Database.GetConnection())
                 {
-                    string query;
+                    conn.Open();
 
+                    string query;
                     if (tipoUsuario == "Cliente")
                     {
-                        query = $"SELECT COUNT(*) FROM {tabla} WHERE cedula = @cedula AND contrasena = @contrasena";
+                        query = $"SELECT COUNT(*) FROM {tabla} WHERE {campoID} = @id AND contrasena = @contrasena";
                     }
                     else
                     {
-                        query = $"SELECT COUNT(*) FROM {tabla} WHERE cedula = @cedula AND contrasena = @contrasena AND codigo = @codigo";
+                        query = $"SELECT COUNT(*) FROM {tabla} WHERE {campoID} = @id AND contrasena = @contrasena AND codigo = @codigo";
                     }
 
                     SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@cedula", cedula);
+                    cmd.Parameters.AddWithValue("@id", id);
                     cmd.Parameters.AddWithValue("@contrasena", contrasena);
                     if (tipoUsuario != "Cliente")
                     {
@@ -134,7 +146,6 @@ namespace TecniFix
                     if (existe > 0)
                     {
                         Form destino = null;
-
                         if (tipoUsuario == "Cliente")
                             destino = new frmMenuCliente();
                         else if (tipoUsuario == "Técnico")
@@ -142,11 +153,8 @@ namespace TecniFix
                         else if (tipoUsuario == "Administrador")
                             destino = new frmMenuAdministrador();
 
-                        if (destino != null)
-                        {
-                            destino.Show();
-                            this.Hide();
-                        }
+                        destino?.Show();
+                        this.Hide();
                     }
                     else
                     {

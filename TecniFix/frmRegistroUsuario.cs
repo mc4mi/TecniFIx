@@ -41,23 +41,28 @@ namespace TecniFix
 
 
             // Obtener los valores de los campos de texto
+            // Obtener los valores del formulario
             string nombre = txtboxNombre.Text.Trim();
             string apellido = txtboxApellido.Text.Trim();
             string correo = txtboxCorreo.Text.Trim();
             string contraseña = txtboxContraseña.Text.Trim();
             string telefono = txtboxTelefono.Text.Trim();
             string celular = txtboxCelular.Text.Trim();
-            string cedula = txtboxCedula.Text.Trim();
+            string idUsuario = txtboxCedula.Text.Trim(); // cédula ahora usada como ID
             string codigo = txtboxCodigo.Text.Trim();
             string tipoUsuario = cmbTipoUsuario.SelectedItem?.ToString();
 
-            // Validar que los campos no estén vacío
+            // Validar que los campos no estén vacíos
             if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(apellido) ||
                 string.IsNullOrWhiteSpace(correo) || string.IsNullOrWhiteSpace(contraseña) ||
                 string.IsNullOrWhiteSpace(telefono) || string.IsNullOrWhiteSpace(celular) ||
-                string.IsNullOrWhiteSpace(cedula))
+                string.IsNullOrWhiteSpace(idUsuario))
             {
                 MessageBox.Show("Todos los campos son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                frmInicio volverInicio = new frmInicio();
+                volverInicio.Show();
+                this.Close();
                 return;
             }
 
@@ -80,13 +85,13 @@ namespace TecniFix
                 return;
             }
             // Validar que la cédula contenga solo dígitos
-            if (!System.Text.RegularExpressions.Regex.IsMatch(cedula, @"^\d+$"))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(idUsuario, @"^\d+$"))
             {
                 MessageBox.Show("La cédula debe contener solo dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             // Validar que la cédula tenga 10 dígitos
-            if (cedula.Length != 10)
+            if (idUsuario.Length != 10)
             {
                 MessageBox.Show("La cédula debe tener 10 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -117,76 +122,101 @@ namespace TecniFix
             {
                 using (SqlConnection conn = Database.GetConnection())
                 {
-                    string tabla = "";
+                    conn.Open();
 
-                    switch (tipoUsuario)
+                    string verificarQuery = "";
+                    string insertQuery = "";
+                    SqlCommand cmd;
+
+                    if (tipoUsuario == "Cliente")
                     {
-                        case "Cliente":
-                            tabla = "Cliente";
-                            break;
-                        case "Técnico":
-                            tabla = "Tecnico";
-                            break;
-                        case "Administrador":
-                            tabla = "Administrador";
-                            break;
-                        default:
-                            MessageBox.Show("Tipo de usuario no válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        verificarQuery = "SELECT COUNT(*) FROM Cliente WHERE correo = @correo OR id_cliente = @id";
+                        cmd = new SqlCommand(verificarQuery, conn);
+                        cmd.Parameters.AddWithValue("@correo", correo);
+                        cmd.Parameters.AddWithValue("@id", idUsuario);
+                        int existe = (int)cmd.ExecuteScalar();
+
+                        if (existe > 0)
+                        {
+                            MessageBox.Show("Ya existe un cliente registrado con este correo o cédula.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             return;
+                        }
+
+                        insertQuery = "INSERT INTO Cliente (id_cliente, nombre, apellido, correo, contrasena, telefono, celular) " +
+                                      "VALUES (@id, @nombre, @apellido, @correo, @contrasena, @telefono, @celular)";
                     }
-
-                    // Verificar si ya existe un usuario con ese correo o cédula en la tabla correspondiente
-                    string verificarQuery = $"SELECT COUNT(*) FROM {tabla} WHERE correo = @correo OR cedula = @cedula";
-                    SqlCommand verificarCmd = new SqlCommand(verificarQuery, conn);
-                    verificarCmd.Parameters.AddWithValue("@correo", correo);
-                    verificarCmd.Parameters.AddWithValue("@cedula", cedula);
-
-                    int existe = (int)verificarCmd.ExecuteScalar();
-
-                    if (existe > 0)
+                    else if (tipoUsuario == "Técnico")
                     {
-                        MessageBox.Show("Ya existe un usuario registrado con este correo o cédula.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        // Volver al formulario de inicio
-                        frmInicio inicioForm = new frmInicio();
-                        inicioForm.Show();
-                        this.Close();
-                        return;
+                        verificarQuery = "SELECT COUNT(*) FROM Tecnico WHERE correo = @correo OR id_tecnico = @id";
+                        cmd = new SqlCommand(verificarQuery, conn);
+                        cmd.Parameters.AddWithValue("@correo", correo);
+                        cmd.Parameters.AddWithValue("@id", idUsuario);
+                        int existe = (int)cmd.ExecuteScalar();
+
+                        if (existe > 0)
+                        {
+                            MessageBox.Show("Ya existe un técnico registrado con este correo o cédula.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
+                        insertQuery = "INSERT INTO Tecnico (id_tecnico, nombre, apellido, correo, contrasena, telefono, celular, codigo) " +
+                                      "VALUES (@id, @nombre, @apellido, @correo, @contrasena, @telefono, @celular, @codigo)";
+                    }
+                    else if (tipoUsuario == "Administrador")
+                    {
+                        verificarQuery = "SELECT COUNT(*) FROM Administrador WHERE correo = @correo OR id_admin = @id";
+                        cmd = new SqlCommand(verificarQuery, conn);
+                        cmd.Parameters.AddWithValue("@correo", correo);
+                        cmd.Parameters.AddWithValue("@id", idUsuario);
+                        int existe = (int)cmd.ExecuteScalar();
+
+                        if (existe > 0)
+                        {
+                            MessageBox.Show("Ya existe un administrador registrado con este correo o cédula.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+
+                        insertQuery = "INSERT INTO Administrador (id_admin, nombre, apellido, correo, contrasena, telefono, celular, codigo) " +
+                                      "VALUES (@id, @nombre, @apellido, @correo, @contrasena, @telefono, @celular, @codigo)";
                     }
 
-                    string query = $"INSERT INTO {tabla} (nombre, apellido, correo, contrasena, telefono, celular, cedula, codigo) " +
-                                   "VALUES (@nombre, @apellido, @correo, @contrasena, @telefono, @celular, @cedula, @codigo)";
-                    SqlCommand cmd = new SqlCommand(query, conn);
+                    // Ejecutar el INSERT
+                    cmd = new SqlCommand(insertQuery, conn);
+                    cmd.Parameters.AddWithValue("@id", idUsuario);
                     cmd.Parameters.AddWithValue("@nombre", nombre);
                     cmd.Parameters.AddWithValue("@apellido", apellido);
                     cmd.Parameters.AddWithValue("@correo", correo);
                     cmd.Parameters.AddWithValue("@contrasena", contraseña);
                     cmd.Parameters.AddWithValue("@telefono", telefono);
                     cmd.Parameters.AddWithValue("@celular", celular);
-                    cmd.Parameters.AddWithValue("@cedula", cedula);
-                    cmd.Parameters.AddWithValue("@codigo", codigo);
+                    if (tipoUsuario != "Cliente")
+                    {
+                        cmd.Parameters.AddWithValue("@codigo", codigo);
+                    }
 
                     int resultado = cmd.ExecuteNonQuery();
 
                     if (resultado > 0)
                     {
                         MessageBox.Show($"Registro exitoso como {tipoUsuario}.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.Close(); // O limpiar campos si prefieres
                     }
                     else
                     {
                         MessageBox.Show("No se pudo completar el registro.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+
+                    this.Close();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al registrar usuario:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             //Función de devolver al inicio para iniciar sesión después de guardar los datos
             frmInicio inicioFormFinal = new frmInicio();
             inicioFormFinal.Show();
             this.Close();
+     
         }
 
 
