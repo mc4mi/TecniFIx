@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSolicitadCliente));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbServicio = new System.Windows.Forms.ComboBox();
             this.txtboxCedulaCliente = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
@@ -67,7 +68,6 @@
             this.txtboxNombre = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.cmbServicio = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -120,6 +120,20 @@
             this.panel1.Size = new System.Drawing.Size(867, 749);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // cmbServicio
+            // 
+            this.cmbServicio.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbServicio.FormattingEnabled = true;
+            this.cmbServicio.Items.AddRange(new object[] {
+            "Mantenimiento",
+            "Reparación ",
+            "Formateo e instalación de programas"});
+            this.cmbServicio.Location = new System.Drawing.Point(215, 755);
+            this.cmbServicio.Name = "cmbServicio";
+            this.cmbServicio.Size = new System.Drawing.Size(188, 29);
+            this.cmbServicio.TabIndex = 75;
+            this.cmbServicio.SelectedIndexChanged += new System.EventHandler(this.cmbServicio_SelectedIndexChanged);
             // 
             // txtboxCedulaCliente
             // 
@@ -534,20 +548,6 @@
             this.label10.Text = "Solicita tu Servicio";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // cmbServicio
-            // 
-            this.cmbServicio.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbServicio.FormattingEnabled = true;
-            this.cmbServicio.Items.AddRange(new object[] {
-            "Mantenimiento",
-            "Reparación ",
-            "Formateo e instalación de programas"});
-            this.cmbServicio.Location = new System.Drawing.Point(215, 755);
-            this.cmbServicio.Name = "cmbServicio";
-            this.cmbServicio.Size = new System.Drawing.Size(188, 29);
-            this.cmbServicio.TabIndex = 75;
-            this.cmbServicio.SelectedIndexChanged += new System.EventHandler(this.cmbServicio_SelectedIndexChanged);
-            // 
             // frmSolicitadCliente
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -559,6 +559,7 @@
             this.Name = "frmSolicitadCliente";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Solicitud";
+            this.Load += new System.EventHandler(this.frmSolicitadCliente_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -42,6 +42,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(715, 289);
             this.dataGridView2.TabIndex = 82;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // label12
             // 
@@ -91,6 +92,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmGestionServiciosTecnico";
             this.Text = "frmGestionServiciosTecnico";
+            this.Load += new System.EventHandler(this.frmGestionServiciosTecnico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

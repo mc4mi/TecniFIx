@@ -328,6 +328,11 @@ namespace TecniFix
                 id_servicio = 0; // Por si acaso no coincide
 
         }
+
+        private void frmSolicitadCliente_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

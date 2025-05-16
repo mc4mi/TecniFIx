@@ -157,6 +157,9 @@
     <EmbeddedResource Include="frmDetalleServicioCliente.resx">
       <DependentUpon>frmDetalleServicioCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDetallesServicioTecnico.resx">
+      <DependentUpon>frmDetallesServicioTecnico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGestionServiciosTecnico.resx">
       <DependentUpon>frmGestionServiciosTecnico.cs</DependentUpon>
     </EmbeddedResource>

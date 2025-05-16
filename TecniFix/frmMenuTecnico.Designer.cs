@@ -31,13 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuTecnico));
             this.btnInicio = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnDetalleServicio = new System.Windows.Forms.Button();
-            this.btnProgramacionServicios = new System.Windows.Forms.Button();
             this.btnGestionServicios = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlInicio = new System.Windows.Forms.Panel();
             this.picBienvenidaTecnico = new System.Windows.Forms.PictureBox();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBienvenidaTecnico)).BeginInit();
@@ -64,7 +63,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.panel1.Controls.Add(this.btnCerrarSesion);
             this.panel1.Controls.Add(this.btnDetalleServicio);
-            this.panel1.Controls.Add(this.btnProgramacionServicios);
             this.panel1.Controls.Add(this.btnGestionServicios);
             this.panel1.Controls.Add(this.btnInicio);
             this.panel1.Controls.Add(this.panel2);
@@ -74,6 +72,22 @@
             this.panel1.Size = new System.Drawing.Size(308, 669);
             this.panel1.TabIndex = 7;
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(134)))));
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 264);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(308, 43);
+            this.btnCerrarSesion.TabIndex = 5;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
             // btnDetalleServicio
             // 
             this.btnDetalleServicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(134)))));
@@ -82,29 +96,13 @@
             this.btnDetalleServicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDetalleServicio.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetalleServicio.ForeColor = System.Drawing.Color.White;
-            this.btnDetalleServicio.Location = new System.Drawing.Point(0, 264);
+            this.btnDetalleServicio.Location = new System.Drawing.Point(0, 221);
             this.btnDetalleServicio.Name = "btnDetalleServicio";
             this.btnDetalleServicio.Size = new System.Drawing.Size(308, 43);
             this.btnDetalleServicio.TabIndex = 4;
             this.btnDetalleServicio.Text = "Detalles Servicios";
             this.btnDetalleServicio.UseVisualStyleBackColor = false;
             this.btnDetalleServicio.Click += new System.EventHandler(this.btnDetalleServicio_Click);
-            // 
-            // btnProgramacionServicios
-            // 
-            this.btnProgramacionServicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(134)))));
-            this.btnProgramacionServicios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProgramacionServicios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProgramacionServicios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnProgramacionServicios.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProgramacionServicios.ForeColor = System.Drawing.Color.White;
-            this.btnProgramacionServicios.Location = new System.Drawing.Point(0, 221);
-            this.btnProgramacionServicios.Name = "btnProgramacionServicios";
-            this.btnProgramacionServicios.Size = new System.Drawing.Size(308, 43);
-            this.btnProgramacionServicios.TabIndex = 3;
-            this.btnProgramacionServicios.Text = "Programación Servicios";
-            this.btnProgramacionServicios.UseVisualStyleBackColor = false;
-            this.btnProgramacionServicios.Click += new System.EventHandler(this.btnProgramacionServicios_Click);
             // 
             // btnGestionServicios
             // 
@@ -151,22 +149,6 @@
             this.picBienvenidaTecnico.TabStop = false;
             this.picBienvenidaTecnico.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(134)))));
-            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Yu Gothic UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 307);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(308, 43);
-            this.btnCerrarSesion.TabIndex = 5;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
             // frmMenuTecnico
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -194,7 +176,6 @@
         private System.Windows.Forms.Panel pnlInicio;
         private System.Windows.Forms.PictureBox picBienvenidaTecnico;
         private System.Windows.Forms.Button btnDetalleServicio;
-        private System.Windows.Forms.Button btnProgramacionServicios;
         private System.Windows.Forms.Button btnGestionServicios;
         private System.Windows.Forms.Button btnCerrarSesion;
     }
