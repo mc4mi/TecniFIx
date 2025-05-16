@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -160,6 +161,9 @@
     <EmbeddedResource Include="frmDetallesServicioTecnico.resx">
       <DependentUpon>frmDetallesServicioTecnico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEnviarFacturaAdministrador.resx">
+      <DependentUpon>frmEnviarFacturaAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGestionServiciosTecnico.resx">
       <DependentUpon>frmGestionServiciosTecnico.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +196,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSolicitarCliente.resx">
       <DependentUpon>frmSolicitarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSolicitudesGestionadasAdministrador.resx">
+      <DependentUpon>frmSolicitudesGestionadasAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerificarPreciosAdministrador.resx">
+      <DependentUpon>frmVerificarPreciosAdministrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

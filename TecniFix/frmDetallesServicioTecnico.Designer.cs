@@ -79,6 +79,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmDetallesServicioTecnico";
             this.Text = "frmDetallesServicioTecnico";
+            this.Load += new System.EventHandler(this.frmDetallesServicioTecnico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

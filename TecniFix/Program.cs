@@ -16,7 +16,7 @@ namespace TecniFix
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMenuTecnico());
+            Application.Run(new frmMenuCliente());
         }
     }
 }

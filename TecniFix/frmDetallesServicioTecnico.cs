@@ -80,5 +80,10 @@ namespace TecniFix
         {
 
         }
+
+        private void frmDetallesServicioTecnico_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
