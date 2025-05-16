@@ -365,11 +365,11 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.LightGray;
-            this.label12.Location = new System.Drawing.Point(223, 272);
+            this.label12.Location = new System.Drawing.Point(138, 272);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(404, 30);
+            this.label12.Size = new System.Drawing.Size(574, 30);
             this.label12.TabIndex = 47;
-            this.label12.Text = "Selecciona tu cédula e indica tu dirección\r\n";
+            this.label12.Text = "Escribe tu cédula, verifica los datos y completa la dirección";
             // 
             // label7
             // 
