@@ -14,6 +14,8 @@ namespace TecniFix
     public partial class frmMenuCliente: Form
     {
         private Form currentFormularioHijo;
+
+
         public frmMenuCliente()
         {
             InitializeComponent();
@@ -78,7 +80,7 @@ namespace TecniFix
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        { 
             abrirFormularioHijo(new frmSolicitadCliente());
         }
 

@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSolicitadCliente));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtboxCedulaCliente = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtboxHora = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtboxFecha = new System.Windows.Forms.TextBox();
             this.cmbRepuesto = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.txtboxDetalleServicio = new System.Windows.Forms.TextBox();
-            this.cmbTipoServicio = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.cmbComputadorCliente = new System.Windows.Forms.ComboBox();
+            this.cmbComputador = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.Deta = new System.Windows.Forms.Label();
@@ -51,7 +51,6 @@
             this.txtboxDireccion = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.cmbCédulaCliente = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -68,6 +67,7 @@
             this.txtboxNombre = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.cmbServicio = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -76,19 +76,20 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackgroundImage = global::TecniFix.Properties.Resources.Fondo_largo;
+            this.panel1.Controls.Add(this.cmbServicio);
+            this.panel1.Controls.Add(this.txtboxCedulaCliente);
             this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtboxHora);
             this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtboxFecha);
             this.panel1.Controls.Add(this.cmbRepuesto);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.txtboxDetalleServicio);
-            this.panel1.Controls.Add(this.cmbTipoServicio);
             this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.cmbComputadorCliente);
+            this.panel1.Controls.Add(this.cmbComputador);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.Deta);
@@ -97,7 +98,6 @@
             this.panel1.Controls.Add(this.txtboxDireccion);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.cmbCédulaCliente);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label11);
@@ -119,6 +119,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(867, 749);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtboxCedulaCliente
+            // 
+            this.txtboxCedulaCliente.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxCedulaCliente.Location = new System.Drawing.Point(215, 345);
+            this.txtboxCedulaCliente.Name = "txtboxCedulaCliente";
+            this.txtboxCedulaCliente.Size = new System.Drawing.Size(188, 29);
+            this.txtboxCedulaCliente.TabIndex = 72;
+            this.txtboxCedulaCliente.TextChanged += new System.EventHandler(this.txtboxCedulaCliente_TextChanged);
             // 
             // btnGuardar
             // 
@@ -127,12 +137,13 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnGuardar.Location = new System.Drawing.Point(347, 922);
+            this.btnGuardar.Location = new System.Drawing.Point(347, 888);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(169, 51);
             this.btnGuardar.TabIndex = 71;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label22
             // 
@@ -146,13 +157,13 @@
             this.label22.TabIndex = 70;
             this.label22.Text = "Hora";
             // 
-            // textBox1
+            // txtboxHora
             // 
-            this.textBox1.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(550, 801);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 29);
-            this.textBox1.TabIndex = 69;
+            this.txtboxHora.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxHora.Location = new System.Drawing.Point(550, 801);
+            this.txtboxHora.Name = "txtboxHora";
+            this.txtboxHora.Size = new System.Drawing.Size(188, 29);
+            this.txtboxHora.TabIndex = 69;
             // 
             // label23
             // 
@@ -166,13 +177,13 @@
             this.label23.TabIndex = 68;
             this.label23.Text = "Fecha";
             // 
-            // textBox2
+            // txtboxFecha
             // 
-            this.textBox2.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(550, 751);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 29);
-            this.textBox2.TabIndex = 67;
+            this.txtboxFecha.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxFecha.Location = new System.Drawing.Point(550, 751);
+            this.txtboxFecha.Name = "txtboxFecha";
+            this.txtboxFecha.Size = new System.Drawing.Size(188, 29);
+            this.txtboxFecha.TabIndex = 67;
             // 
             // cmbRepuesto
             // 
@@ -228,20 +239,8 @@
             this.txtboxDetalleServicio.Location = new System.Drawing.Point(216, 802);
             this.txtboxDetalleServicio.Multiline = true;
             this.txtboxDetalleServicio.Name = "txtboxDetalleServicio";
-            this.txtboxDetalleServicio.Size = new System.Drawing.Size(188, 80);
+            this.txtboxDetalleServicio.Size = new System.Drawing.Size(188, 53);
             this.txtboxDetalleServicio.TabIndex = 62;
-            // 
-            // cmbTipoServicio
-            // 
-            this.cmbTipoServicio.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTipoServicio.FormattingEnabled = true;
-            this.cmbTipoServicio.Items.AddRange(new object[] {
-            ""});
-            this.cmbTipoServicio.Location = new System.Drawing.Point(216, 752);
-            this.cmbTipoServicio.Name = "cmbTipoServicio";
-            this.cmbTipoServicio.Size = new System.Drawing.Size(188, 29);
-            this.cmbTipoServicio.TabIndex = 61;
-            this.cmbTipoServicio.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label18
             // 
@@ -256,16 +255,16 @@
             this.label18.Text = "Tipo Servicio";
             this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
-            // cmbComputadorCliente
+            // cmbComputador
             // 
-            this.cmbComputadorCliente.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbComputadorCliente.FormattingEnabled = true;
-            this.cmbComputadorCliente.Items.AddRange(new object[] {
+            this.cmbComputador.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbComputador.FormattingEnabled = true;
+            this.cmbComputador.Items.AddRange(new object[] {
             ""});
-            this.cmbComputadorCliente.Location = new System.Drawing.Point(216, 706);
-            this.cmbComputadorCliente.Name = "cmbComputadorCliente";
-            this.cmbComputadorCliente.Size = new System.Drawing.Size(188, 29);
-            this.cmbComputadorCliente.TabIndex = 59;
+            this.cmbComputador.Location = new System.Drawing.Point(216, 706);
+            this.cmbComputador.Name = "cmbComputador";
+            this.cmbComputador.Size = new System.Drawing.Size(188, 29);
+            this.cmbComputador.TabIndex = 59;
             // 
             // label15
             // 
@@ -359,17 +358,6 @@
             this.label14.Size = new System.Drawing.Size(164, 50);
             this.label14.TabIndex = 49;
             this.label14.Text = "Servicio ";
-            // 
-            // cmbCédulaCliente
-            // 
-            this.cmbCédulaCliente.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbCédulaCliente.FormattingEnabled = true;
-            this.cmbCédulaCliente.Items.AddRange(new object[] {
-            ""});
-            this.cmbCédulaCliente.Location = new System.Drawing.Point(216, 339);
-            this.cmbCédulaCliente.Name = "cmbCédulaCliente";
-            this.cmbCédulaCliente.Size = new System.Drawing.Size(188, 29);
-            this.cmbCédulaCliente.TabIndex = 48;
             // 
             // label12
             // 
@@ -546,6 +534,20 @@
             this.label10.Text = "Solicita tu Servicio";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
+            // cmbServicio
+            // 
+            this.cmbServicio.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbServicio.FormattingEnabled = true;
+            this.cmbServicio.Items.AddRange(new object[] {
+            "Mantenimiento",
+            "Reparación ",
+            "Formateo e instalación de programas"});
+            this.cmbServicio.Location = new System.Drawing.Point(215, 755);
+            this.cmbServicio.Name = "cmbServicio";
+            this.cmbServicio.Size = new System.Drawing.Size(188, 29);
+            this.cmbServicio.TabIndex = 75;
+            this.cmbServicio.SelectedIndexChanged += new System.EventHandler(this.cmbServicio_SelectedIndexChanged);
+            // 
             // frmSolicitadCliente
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -567,43 +569,43 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtboxTelefono;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtboxCelular;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtboxApellido;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtboxNombre;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cmbCédulaCliente;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtboxHora;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox txtboxFecha;
+        private System.Windows.Forms.ComboBox cmbRepuesto;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox txtboxDetalleServicio;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox cmbComputador;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label Deta;
         private System.Windows.Forms.TextBox txtboxDetallesDireccion;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtboxDireccion;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox cmbComputadorCliente;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox cmbTipoServicio;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox txtboxDetalleServicio;
-        private System.Windows.Forms.ComboBox cmbRepuesto;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtboxTelefono;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtboxCelular;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtboxApellido;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtboxNombre;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtboxCedulaCliente;
+        private System.Windows.Forms.ComboBox cmbServicio;
     }
 }

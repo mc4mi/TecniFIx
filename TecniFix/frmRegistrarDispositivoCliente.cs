@@ -132,7 +132,7 @@ namespace TecniFix
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-
+            panel2.BackgroundImageLayout = ImageLayout.Stretch;
         }
     }
 }
